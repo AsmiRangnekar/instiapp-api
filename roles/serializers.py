@@ -32,6 +32,7 @@ class RoleSerializer(serializers.ModelSerializer):
             "users_detail",
             "priority",
             "official_post",
+            "taggable",
         )
 
     @classmethod
@@ -73,6 +74,7 @@ class RoleSerializerWithEvents(serializers.ModelSerializer):
             "permissions",
             "events",
             "priority",
+            "taggable",
         )
 
     @staticmethod
@@ -93,7 +95,7 @@ class RoleSerializerMin(serializers.ModelSerializer):
 
     class Meta:
         model = BodyRole
-        fields = ("id", "name", "body", "users_detail", "priority")
+        fields = ("id", "name", "body", "users_detail", "priority", "taggable")
 
 
 class FormerRoleSerializer(serializers.ModelSerializer):

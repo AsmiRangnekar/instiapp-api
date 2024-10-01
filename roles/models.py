@@ -29,6 +29,7 @@ class BodyRole(models.Model):
     priority = models.IntegerField(default=0)
     official_post = models.BooleanField(default=True)
     permanent = models.BooleanField(default=False)
+    taggable = models.BooleanField(default=False)
 
     class Meta:
         verbose_name = "Body Role"
